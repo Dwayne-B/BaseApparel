@@ -1,0 +1,50 @@
+@use "../util" as *;
+
+.main_content_form{
+    
+    position: relative;
+        &_input{
+            position: relative;
+            width: 100%;
+            border-radius: rem(50);
+            height: rem(48);
+            padding:rem(20) rem(20) rem(15) rem(20);
+            border-color: var(--input-border)
+        }
+      
+    &_input::placeholder{
+        font-size: rem(14);
+        opacity: 0.5;
+        }
+        &_input_button{
+    position: absolute;
+    right: 0;
+    top: 0%;
+    bottom: 0%;
+    background: var(--btn);
+    box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+    border-radius: rem(28);
+    width: rem(64);
+    height: rem(48);
+    border: none;
+    transition: transform ;
+    transition-duration: .4s;
+            }
+            &_input_button:hover{
+                transform:scale(1.25);
+                box-shadow:0px 10px 20px rgb(198, 110, 110);
+                background: rgb(242, 170, 170);
+                transition-duration: .4s;
+            }
+  
+         
+    
+    }
+    .error{
+        text-align: left;
+        padding:rem(10) rem(20) rem(15) rem(20);
+        color: var(--primarySoftRed);
+      }
+      .error-border{
+        border: solid var(--primarySoftRed) 2.5px;
+      }
